@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dmSans.variable} antialiased flex flex-col min-h-screen`}>
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 p-6">
           {children}
         </main>
         <Footer />
