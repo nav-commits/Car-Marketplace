@@ -1,9 +1,48 @@
+import { footerColumns, socials } from "../../data/footerData";
 
 export default function Footer() {
-    return (
-      <footer className="bg-gray-900 text-white p-4 mt-auto">
-        <p className="text-center">&copy; 2026 My Website</p>
-      </footer>
-    );
-  }
-  
+  return (
+    <footer className="mt-12">
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 border-t border-gray-300">
+        {footerColumns.map((column, index) => (
+          <div key={index}>
+            <h3 className="font-semibold mb-4">{column.title}</h3>
+            <ul className="space-y-2 text-sm">
+              {column.items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+            {column.title === "Sale Hours" && (
+              <>
+                <h4 className="font-semibold mt-6 mb-2">{socials.title}</h4>
+                <div className="flex items-center gap-3 text-lg text-gray-700">
+                  {socials.items.map((social, i) => {
+                    const Icon = social.icon; 
+                    return (
+                      <a
+                        key={i}
+                        href="#"
+                        aria-label={social.label}
+                        className="hover:text-gray-900"
+                      >
+                        <Icon />
+                      </a>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className="px-6 py-4 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+        <p>&copy; 2025 exemple.com. All rights reserved.</p>
+        <div className="flex gap-3 mt-2 md:mt-0">
+          <p>Terms & Conditions</p>
+          <p>Privacy Notice</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
