@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from  "./components/Footer";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -21,11 +21,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} antialiased flex flex-col min-h-screen`}>
+      <body
+        className={`${dmSans.variable} antialiased flex flex-col min-h-screen`}
+      >
         <Header />
-        <main className="flex-1 p-6">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

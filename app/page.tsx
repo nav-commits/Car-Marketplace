@@ -1,8 +1,9 @@
+import HeroSection from "./components/sections/HeroSection/HeroSection";
 export default function Home() {
   return (
-    <div className="flex min-h-screen p-4">
+    <div>
       <main>
-        <h1 className="text-2xl">Welcome</h1>
+       <HeroSection/>
       </main>
     </div>
   );

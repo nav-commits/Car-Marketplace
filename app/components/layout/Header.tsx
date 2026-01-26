@@ -1,15 +1,14 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import Button from "./Button";
-import NavLinks from "../components/NavBar";
+import Button from "../ui/Button";
+import NavLinks from "./NavBar";
 import { Bars3Icon, Bars3BottomRightIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
-    <header className="p-4">
+    <header className="p-4 ml-4">
       <div className="flex items-center justify-between">
         {/* Logo + Phone */}
         <div className="flex gap-8 items-center">
@@ -19,12 +18,11 @@ export default function Header() {
             width={90}
             height={34}
           />
-          <div className="hidden sm:flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <img src="/Icons/phone.svg" alt="phone-icon" className="w-4 h-4" />
             <p className="text-xs">+75 123 456 789</p>
           </div>
         </div>
-
         {/* Desktop Nav + Button */}
         <div className="hidden md:flex items-center gap-3 justify-center">
           <NavLinks />

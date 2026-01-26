@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { UserIcon } from "@heroicons/react/24/outline";
-import { navLinks } from "../../data/navData";
+import { navLinks } from "../../../data/navData";
 import { NavLinksProps } from "@/types/navTypes";
 
 const NavLinks: React.FC<NavLinksProps> = ({ isMobile }) => {
