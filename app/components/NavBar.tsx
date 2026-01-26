@@ -1,83 +1,69 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { UserIcon } from "@heroicons/react/24/outline";
+import { navLinks } from "../../data/navData";
+import { NavLinksProps } from "@/types/navTypes";
 
-interface NavLink {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  userIcon?: React.ReactNode;
-  subMenu?: { name: string; href: string }[];
-}
-
-const navLinks: NavLink[] = [
-  {
-    name: "Home",
-    href: "#",
-    subMenu: [
-      { name: "Home 1", href: "#" },
-      { name: "Home 2", href: "#" },
-    ],
-    icon: true,
-  },
-  {
-    name: "Listing",
-    href: "#",
-    subMenu: [
-      { name: "Listing Grid", href: "#" },
-      { name: "Listing List", href: "#" },
-    ],
-    icon: true,
-  },
-  {
-    name: "Blog",
-    href: "#",
-    subMenu: [
-      { name: "Blog Grid", href: "#" },
-      { name: "Blog List", href: "#" },
-    ],
-    icon: true,
-  },
-  {
-    name: "Pages",
-    href: "#",
-    subMenu: [
-      { name: "Page 1", href: "#" },
-      { name: "Page 2", href: "#" },
-    ],
-    icon: true,
-  },
-  { name: "About", href: "#" },
-  { name: "Contact", href: "#" },
-  { name: "Sign In", href: "#", userIcon: true },
-];
-
-const NavLinks: React.FC = () => {
+const NavLinks: React.FC<NavLinksProps> = ({ isMobile }) => {
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   return (
     <nav>
-      <ul className="flex space-x-6">
+      <ul
+        className={`${isMobile ? "flex flex-col space-y-2" : "flex space-x-6"}`}
+      >
         {navLinks.map((link, index) => (
-          <li key={index} className="relative group">
-            <Link href={link.href} className="flex items-center">
-              {link.userIcon && <UserIcon className="w-5 h-5" />}
-              {link.name}
-              {link.icon && <ChevronDownIcon className="w-4 h-4" />}
-            </Link>
-            {/* {link.subMenu && (
-              <ul className="absolute left-0 mt-2 text-sm rounded shadow-lg hidden group-hover:block">
-                {link.subMenu.map((subLink, subIndex) => (
-                  <li key={subIndex}>
-                    <a
-                      href={subLink.href}
-                      className="block px-4 py-2 hover:bg-gray-600"
+          <li key={index} className="relative">
+            {!link.subMenu ? (
+              <Link
+                href={link.href}
+                className={`flex items-center ${isMobile ? "py-2" : ""}`}
+              >
+                {link.userIcon && <UserIcon className="w-5 h-5 mr-1" />}
+                {link.name}
+              </Link>
+            ) : (
+              <div>
+                <button
+                  onClick={() =>
+                    isMobile
+                      ? setOpenDropdown(
+                          openDropdown === link.name ? null : link.name
+                        )
+                      : undefined
+                  }
+                  className={`flex items-center justify-between w-full ${
+                    isMobile ? "py-2" : ""
+                  }`}
+                >
+                  {link.name}
+                  {link.icon && <ChevronDownIcon className="w-4 h-4 ml-1" />}
+                </button>
+                {/* Dropdown */}
+                {(isMobile ? openDropdown === link.name : true) &&
+                  link.subMenu && (
+                    <ul
+                      className={`${
+                        isMobile
+                          ? "flex flex-col ml-4 mt-1 space-y-1"
+                          : "absolute left-0 mt-2 hidden group-hover:block bg-white shadow-md rounded"
+                      }`}
                     >
-                      {subLink.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )} */}
+                      {link.subMenu.map((subLink, subIndex) => (
+                        <li key={subIndex}>
+                          <Link
+                            href={subLink.href}
+                            className="block px-4 py-2 hover:bg-gray-200"
+                          >
+                            {subLink.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+              </div>
+            )}
           </li>
         ))}
       </ul>
