@@ -1,4 +1,5 @@
 import { footerColumns, socials } from "../../../data/footerData";
+import Button from "../ui/Button";
 
 export default function Footer() {
   return (
@@ -15,9 +16,9 @@ export default function Footer() {
             {column.title === "Sale Hours" && (
               <>
                 <h4 className="font-semibold mt-6 mb-2">{socials.title}</h4>
-                <div className="flex items-center gap-3 text-lg text-gray-700">
+                <div className="flex items-center gap-3 text-md">
                   {socials.items.map((social, i) => {
-                    const Icon = social.icon; 
+                    const Icon = social.icon;
                     return (
                       <a
                         key={i}
@@ -35,13 +36,23 @@ export default function Footer() {
           </div>
         ))}
       </div>
-
       <div className="px-6 py-4 border-t border-gray-300 flex flex-col md:flex-row justify-around items-center text-sm">
         <p>&copy; 2025 exemple.com. All rights reserved.</p>
         <div className="flex gap-3 mt-2 md:mt-0">
           <p>Terms & Conditions</p>
           <p>Privacy Notice</p>
         </div>
+        <Button
+          boderRadius="rounded-full"
+          className="bg-[#405FF2] px-3 py-3"
+          icon={
+            <img
+              src="/Icons/arrow-up.svg"
+              alt="phone-icon"
+              className="w-4 h-4"
+            />
+          }
+        />
       </div>
     </footer>
   );

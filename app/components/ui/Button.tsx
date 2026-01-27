@@ -1,18 +1,24 @@
 import React from "react";
+import clsx from "clsx";
 
 interface ButtonProps {
-  title: string;
-  bgClass?: string;
+  title?: string;
+  className?: string;
   icon?: React.ReactNode;
+  boderRadius?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ title, bgClass, icon }) => {
+const Button: React.FC<ButtonProps> = ({ title, className, icon, boderRadius }) => {
   return (
     <button
-      className={`flex items-center gap-2 border px-4 py-2 rounded-lg cursor-pointer ${bgClass}`}
+      className={clsx(
+        "flex items-center gap-2 cursor-pointer",
+        boderRadius,
+        className
+      )}
     >
       {icon && <span className="flex items-center">{icon}</span>}
-      {title}
+      {title && <span>{title}</span>}
     </button>
   );
 };

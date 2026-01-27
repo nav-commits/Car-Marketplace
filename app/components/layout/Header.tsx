@@ -28,7 +28,7 @@ export default function Header() {
           <NavLinks />
         </div>
         <div className="hidden md:block">
-          <Button title="Submit listing" />
+          <Button title="Submit listing" boderRadius="rounded-lg" className="border px-4 py-2"  />
         </div>
         <div className="md:hidden">
           <button
@@ -48,7 +48,7 @@ export default function Header() {
         <div className="md:hidden mt-4 bg-white shadow-lg rounded-lg p-4 space-y-2">
           <NavLinks isMobile />
           <div>
-            <Button title="Submit listing" />
+            <Button title="Submit listing" boderRadius="rounded-lg" className="border px-4 py-2" />
           </div>
         </div>
       )}
