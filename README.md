@@ -4,6 +4,9 @@ A **Next.js + TypeScript + Tailwind CSS** project for designing a car marketplac
 
 [View Figma Design](https://www.figma.com/design/gXvDFLFG3zPzwJM5CKaA6M/75--Car-Dealer-Website-Templates--Community-?node-id=5-779&t=NlzGuxc4Bocegwcr-0)
 
+<img width="479" height="1050" alt="Screenshot 2026-01-28 at 6 14 59 PM" src="https://github.com/user-attachments/assets/0c2851e4-a7a9-40ac-8dbf-852ffde6c66b" />
+<img width="479" height="1104" alt="Screenshot 2026-01-28 at 6 15 33 PM" src="https://github.com/user-attachments/assets/40ca10ef-240e-4159-b18b-4806f789490d" />
+
 ## Overview
 This project is a **frontend-only prototype** of a car marketplace homepage. It includes:
 
