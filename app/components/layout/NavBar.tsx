@@ -9,10 +9,13 @@ import clsx from "clsx";
 
 const NavLinks: React.FC<NavLinksProps> = ({ isMobile }) => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-
   return (
     <nav>
-      <ul className={clsx(isMobile ? "flex flex-col space-y-2" : "flex space-x-6")}>
+      <ul
+        className={clsx(
+          isMobile ? "flex flex-col space-y-2" : "flex space-x-6"
+        )}
+      >
         {navLinks.map((link, index) => (
           <li key={index} className="relative">
             {!link.subMenu ? (
@@ -28,7 +31,9 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMobile }) => {
                 <button
                   onClick={() =>
                     isMobile
-                      ? setOpenDropdown(openDropdown === link.name ? null : link.name)
+                      ? setOpenDropdown(
+                          openDropdown === link.name ? null : link.name
+                        )
                       : undefined
                   }
                   className={clsx(
@@ -37,9 +42,10 @@ const NavLinks: React.FC<NavLinksProps> = ({ isMobile }) => {
                   )}
                 >
                   {link.name}
-                  {link.icon && <ChevronDownIcon className="w-4 h-4 ml-1" />}
+                  {link.icon && (
+                    <img src="/Icons/arrow-down.svg" alt="arrow-down" className="ml-1" />
+                  )}
                 </button>
-
                 {/* Dropdown */}
                 {(isMobile ? openDropdown === link.name : true) &&
                   link.subMenu && (

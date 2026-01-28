@@ -7,13 +7,11 @@ interface SelectOption {
   label: string;
   value: string;
 }
-
 interface SelectProps {
   options: SelectOption[];
   placeholder?: string;
   className?: string;
 }
-
 const Select: React.FC<SelectProps> = ({
   options,
   placeholder,
@@ -41,7 +39,7 @@ const Select: React.FC<SelectProps> = ({
         className="flex items-center justify-between w-full rounded-md px-3 py-2 text-sm"
       >
         <span>{selected ? selected.label : placeholder}</span>
-        <ChevronDownIcon className="w-4 h-4" />
+        <img src="/Icons/arrow-down.svg" alt="arrow-down" />
       </button>
       {open && (
         <ul className="absolute z-10 mt-1 w-full bg-white rounded-md shadow-md">

@@ -43,7 +43,7 @@ export default function Footer() {
           <p>Privacy Notice</p>
         </div>
         <Button
-          boderRadius="rounded-full"
+          borderRadius="rounded-full"
           className="bg-[#405FF2] px-3 py-3"
           icon={
             <img

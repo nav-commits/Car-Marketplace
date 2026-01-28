@@ -5,15 +5,15 @@ interface ButtonProps {
   title?: string;
   className?: string;
   icon?: React.ReactNode;
-  boderRadius?: string;
+  borderRadius?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ title, className, icon, boderRadius }) => {
+const Button: React.FC<ButtonProps> = ({ title, className, icon, borderRadius }) => {
   return (
     <button
       className={clsx(
         "flex items-center gap-2 cursor-pointer",
-        boderRadius,
+        borderRadius,
         className
       )}
     >
