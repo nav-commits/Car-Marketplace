@@ -10,8 +10,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ children, bgColor, className }) => {
   return (
     <div
-      className={clsx("p-4", className)}
-      style={{ backgroundColor: bgColor }}
+      className={clsx("p-4", bgColor, className)}
     >
       {children}
     </div>
