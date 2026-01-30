@@ -17,8 +17,8 @@ const Button: React.FC<ButtonProps> = ({ title, className, icon, borderRadius })
         className
       )}
     >
-      {icon && <span className="flex items-center">{icon}</span>}
       {title && <span>{title}</span>}
+      {icon && <span className="flex items-center">{icon}</span>}
     </button>
   );
 };
