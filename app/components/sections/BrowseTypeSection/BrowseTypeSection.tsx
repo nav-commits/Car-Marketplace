@@ -9,7 +9,7 @@ const BrowseTypeSection: React.FC = () => {
       <h2 className="text-center font-bold text-[40px] mb-12 mt-12">
         Browse by Type
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-9 justify-items-center gap-2">
+      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-9 justify-items-center gap-2">
         {carTypes.map((type) => (
           <Card
             key={type.title}
@@ -28,7 +28,7 @@ const BrowseTypeSection: React.FC = () => {
           </Card>
         ))}
       </div>
-      <div className="flex justify-center gap-8 mt-12 ">
+      <div className="flex flex-col md:flex-row justify-center gap-8 mt-12">
         {/* Card 1 */}
         <Card className="rounded-lg" bgColor="bg-[#E9F2FF]">
           <div className="p-6 flex flex-col justify-between">
@@ -62,6 +62,7 @@ const BrowseTypeSection: React.FC = () => {
             </div>
           </div>
         </Card>
+        {/* Card 2 */}
         <Card className="rounded-lg" bgColor="bg-[#FFE9F3]">
           <div className="p-6 flex flex-col justify-between">
             <div>
