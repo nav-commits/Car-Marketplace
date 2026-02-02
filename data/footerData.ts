@@ -1,6 +1,6 @@
 
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import type { FooterColumn, Socials } from "../types/footerTypes";
+import type { FooterColumn, Socials } from "../types/footerType";
 
 export const footerColumns: FooterColumn[] = [
   {

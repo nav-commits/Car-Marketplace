@@ -25,7 +25,7 @@ const Tabs: React.FC<TabsProps> = ({
             "pb-2 text-sm transition-colors cursor-pointer",
             activeTab === tab
               ? "border-b-2 border-[#405FF2] font-semibold"
-              : "text-gray-500 hover:text-black"
+              : "hover:text-black"
           )}
         >
           {tab}

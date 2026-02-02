@@ -1,6 +1,6 @@
-import { CarType } from "@/types/car";
+import { BrowseCarType } from "@/types/browseCarType";
   
-  export const carTypes: CarType[] = [
+  export const carTypes: BrowseCarType[] = [
     { icon: "/icons/suv.svg", title: "SUV" },
     { icon: "/icons/sedan.svg", title: "Sedan" },
     { icon: "/icons/hatchback.svg", title: "Hatchback" },
