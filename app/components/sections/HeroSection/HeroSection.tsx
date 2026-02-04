@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
       <p className="text-base mt-20 mb-4">
         Find cars for sale and for rent near you
       </p>
-      <h1 className="md:text-[70px] font-bold mb-6">Find Your Dream Car</h1>
+      <h1 className="text-[70px] md: text-center font-bold mb-6">Find Your Dream Car</h1>
       <Card className="bg-white rounded-lg lg:rounded-full p-4">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
           {selectOptions.map((item, index) => (

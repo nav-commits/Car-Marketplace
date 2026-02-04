@@ -11,7 +11,6 @@ export default function Header() {
   return (
     <header className="p-4">
       <div className="flex flex-wrap items-center justify-between">
-        {/* Logo + Phone */}
         <div className="flex items-center gap-2 flex-shrink-0">
           <Image
             src="/Images/logo black.png"
