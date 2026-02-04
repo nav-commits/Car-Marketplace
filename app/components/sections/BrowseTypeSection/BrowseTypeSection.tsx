@@ -1,6 +1,6 @@
 import Card from "../../ui/Card";
 import Image from "next/image";
-import { carTypes } from "@/data/carTypes";
+import { carTypes } from "@/data/browseCarData";
 import Button from "../../ui/Button";
 
 const BrowseTypeSection: React.FC = () => {
@@ -13,7 +13,7 @@ const BrowseTypeSection: React.FC = () => {
         {carTypes.map((type) => (
           <Card
             key={type.title}
-            className="flex flex-col items-center justify-center border border-[#E9E9E9] rounded-lg"
+            className="p-4 flex flex-col items-center justify-center border border-[#E9E9E9] rounded-lg"
           >
             {type.icon && (
               <Image
