@@ -22,7 +22,7 @@ const MostSearchSection: React.FC = () => {
   });
   return (
     <section className="px-6">
-      <h2 className="text-center font-bold text-[40px] mb-12 mt-12">
+      <h2 className="text-center font-bold text-[30px] mb-12 mt-12">
         The Most Searched Cars
       </h2>
       <div className="flex gap-6 justify-center border-b max-w-7xl mx-auto border-gray-300">

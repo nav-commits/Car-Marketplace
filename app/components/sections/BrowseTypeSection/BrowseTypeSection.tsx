@@ -6,7 +6,7 @@ import Button from "../../ui/Button";
 const BrowseTypeSection: React.FC = () => {
   return (
     <section className="px-6">
-      <h2 className="text-center font-bold text-[40px] mb-12 mt-12">
+      <h2 className="text-center font-bold text-[30px] mb-12 mt-12">
         Browse by Type
       </h2>
       <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-9 justify-items-center gap-2">
