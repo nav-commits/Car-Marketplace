@@ -1,3 +1,4 @@
+'use client'
 import { footerColumns, socials } from "../../../data/footerData";
 import Button from "../ui/Button";
 
@@ -45,6 +46,9 @@ export default function Footer() {
         <Button
           borderRadius="rounded-full"
           className="bg-[#405FF2] px-3 py-3"
+          onClick={() =>
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }
           icon={
             <img
               src="/Icons/arrow-up.svg"

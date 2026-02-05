@@ -6,11 +6,19 @@ interface ButtonProps {
   className?: string;
   icon?: React.ReactNode;
   borderRadius?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button: React.FC<ButtonProps> = ({ title, className, icon, borderRadius }) => {
+const Button: React.FC<ButtonProps> = ({
+  title,
+  className,
+  icon,
+  borderRadius,
+  onClick,
+}) => {
   return (
     <button
+      onClick={onClick}
       className={clsx(
         "flex items-center gap-2 cursor-pointer",
         borderRadius,
