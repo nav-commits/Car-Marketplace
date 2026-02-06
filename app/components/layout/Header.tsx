@@ -2,14 +2,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import Button from "../ui/Button";
-import NavLinks from "./NavBar";
+import NavLinks from "../ui/NavBar";
 import { Bars3Icon, Bars3BottomRightIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="p-4">
+    <header className="p-8">
       <div className="flex flex-wrap items-center justify-between">
         <div className="flex items-center gap-2 flex-shrink-0">
           <Image
