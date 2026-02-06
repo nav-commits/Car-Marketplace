@@ -2,6 +2,7 @@ import BrowseTypeSection from "./components/sections/BrowseTypeSection/BrowseTyp
 import HeroSection from "./components/sections/HeroSection/HeroSection";
 import MostSearchSection from "./components/sections/MostSearchSection/MostSearchSection";
 import NeedSomeInspirationSection from "./components/sections/NeedSomeInspirationSection/NeedSomeInspirationSection";
+import OurTeamSection from "./components/sections/OurTeamSection/OurTeamSection";
 import WhyChooseUsSection from "./components/sections/WhyChooseUsSection/WhyChooseUsSection";
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
        <MostSearchSection/>
        <WhyChooseUsSection/>
        <NeedSomeInspirationSection/>
+       <OurTeamSection/>
       </main>
     </div>
   );
