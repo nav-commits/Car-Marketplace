@@ -9,29 +9,31 @@ const BrowseTypeSection: React.FC = () => {
       <h2 className="text-center font-bold text-[30px] mb-12 mt-12">
         Browse by Type
       </h2>
-      <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-9 justify-items-center gap-2">
+
+      {/* Car Type Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9 justify-items-center gap-4">
         {carTypes.map((type) => (
           <Card
             key={type.title}
-            className="p-4 flex flex-col items-center justify-center border border-[#E9E9E9] rounded-lg"
+            className="p-6 flex flex-col items-center justify-center border border-[#E9E9E9] rounded-lg"
           >
             {type.icon && (
               <Image
                 src={type.icon}
-                alt={type.title + " icon"}
+                alt={`${type.title} icon`}
                 width={34}
                 height={34}
                 className="mb-2"
               />
             )}
-            <p className="text-md font-medium">{type.title}</p>
+            <p className="text-md font-medium text-center">{type.title}</p>
           </Card>
         ))}
       </div>
-      <div className="flex flex-col md:flex-row justify-center gap-8 mt-12">
+      <div className="flex flex-col md:flex-row gap-6 mt-12">
         {/* Card 1 */}
-        <Card className="rounded-lg" bgColor="bg-[#E9F2FF]">
-          <div className="p-6 flex flex-col justify-between">
+        <Card className="rounded-lg flex-1" bgColor="bg-[#E9F2FF]">
+          <div className="p-6 flex flex-col justify-between h-full">
             <div>
               <h3 className="text-[32px] font-bold mb-4">
                 Are You Looking For a Car?
@@ -41,30 +43,33 @@ const BrowseTypeSection: React.FC = () => {
                 service.
               </p>
             </div>
-            <div className="flex items-center justify-between mt-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-4 gap-4">
               <Button
                 title="Get Started"
                 borderRadius="rounded-lg"
-                className="px-6 py-4 bg-[#405FF2] text-white"
+                className="px-6 py-4 bg-[#405FF2] text-white flex items-center justify-center gap-2"
                 icon={
                   <img
                     src="/Icons/cta-arrow.svg"
-                    alt="search-icon"
+                    alt="arrow icon"
                     className="w-3 h-3"
                   />
                 }
               />
-              <img
+              <Image
                 src="/Icons/electric-car.svg"
                 alt="electric car"
-                className="w-20 h-20 object-contain"
+                width={80}
+                height={80}
+                className="object-contain"
               />
             </div>
           </div>
         </Card>
+
         {/* Card 2 */}
-        <Card className="rounded-lg" bgColor="bg-[#FFE9F3]">
-          <div className="p-6 flex flex-col justify-between">
+        <Card className="rounded-lg flex-1" bgColor="bg-[#FFE9F3]">
+          <div className="p-6 flex flex-col justify-between h-full">
             <div>
               <h3 className="text-[32px] font-bold mb-4">
                 Do You Want to Sell a Car?
@@ -74,23 +79,25 @@ const BrowseTypeSection: React.FC = () => {
                 service.
               </p>
             </div>
-            <div className="flex items-center justify-between mt-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-4 gap-4">
               <Button
                 title="Get Started"
                 borderRadius="rounded-lg"
-                className="px-6 py-4 bg-[#050B20] text-white"
+                className="px-6 py-4 bg-[#050B20] text-white flex items-center justify-center gap-2"
                 icon={
                   <img
                     src="/Icons/cta-arrow.svg"
-                    alt="search-icon"
+                    alt="arrow icon"
                     className="w-3 h-3"
                   />
                 }
               />
-              <img
+              <Image
                 src="/Icons/electric-car2.svg"
                 alt="electric car"
-                className="w-20 h-20 object-contain"
+                width={80}
+                height={80}
+                className="object-contain"
               />
             </div>
           </div>
