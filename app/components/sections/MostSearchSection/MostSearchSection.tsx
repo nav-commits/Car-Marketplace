@@ -50,10 +50,14 @@ const MostSearchSection: React.FC = () => {
                   {car.label && (
                     <div
                       className={clsx(
-                        "absolute top-2 left-2 px-3 py-1 text-sm font-bold rounded-xl text-white",
+                        "absolute top-2 left-2 px-3 py-1 text-sm font-bold rounded-xl",
                         {
-                          "bg-[#3D923A]": car.label === "Great Price",
-                          "bg-blue-500": car.label === "Low Mileage",
+                          "bg-[#3D923A] text-white":
+                            car.label === "Great Price",
+                          "bg-blue-500 text-white": car.label === "Low Mileage",
+                          "bg-white text-black":
+                            car.label !== "Great Price" &&
+                            car.label !== "Low Mileage",
                         }
                       )}
                     >
