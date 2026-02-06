@@ -8,10 +8,12 @@ import React from "react";
 const HeroSection: React.FC = () => {
   return (
     <section className="flex flex-col items-center justify-center bg-[#EEF1FB]">
-      <p className="text-base mt-20 mb-4">
+      <p className="mt-20 mb-4 text-center p-4">
         Find cars for sale and for rent near you
       </p>
-      <h1 className="text-[70px] md: text-center font-bold mb-6">Find Your Dream Car</h1>
+      <h1 className="text-[70px] text-center font-bold mb-6">
+        Find Your Dream Car
+      </h1>
       <Card className="bg-white rounded-lg lg:rounded-full p-4">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
           {selectOptions.map((item, index) => (
@@ -19,7 +21,6 @@ const HeroSection: React.FC = () => {
               <div className="flex items-center">
                 <Select placeholder={item.placeholder} options={item.options} />
               </div>
-              {/* Divider between items only */}
               {index !== selectOptions.length - 1 && (
                 <div className="hidden lg:block h-6 w-px bg-gray-300" />
               )}

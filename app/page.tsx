@@ -1,4 +1,5 @@
 import BrowseTypeSection from "./components/sections/BrowseTypeSection/BrowseTypeSection";
+import ExploreOurPremiumBrandsSection from "./components/sections/ExploreOurPremiumBrandsSection/ExploreOurPremiumBrandsSection";
 import HeroSection from "./components/sections/HeroSection/HeroSection";
 import LatestBlogsSection from "./components/sections/LatestBlogsSection/LatestBlogsSection";
 import MostSearchSection from "./components/sections/MostSearchSection/MostSearchSection";
@@ -16,6 +17,7 @@ export default function Home() {
        <NeedSomeInspirationSection/>
        <OurTeamSection/>
        <LatestBlogsSection/>
+       <ExploreOurPremiumBrandsSection/>
       </main>
     </div>
   );
