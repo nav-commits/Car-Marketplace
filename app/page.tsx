@@ -1,6 +1,7 @@
 import BrowseTypeSection from "./components/sections/BrowseTypeSection/BrowseTypeSection";
 import ExploreOurPremiumBrandsSection from "./components/sections/ExploreOurPremiumBrandsSection/ExploreOurPremiumBrandsSection";
 import HeroSection from "./components/sections/HeroSection/HeroSection";
+import JoinHutCarSection from "./components/sections/JoinCarHutSection/JoinCarHutSection";
 import LatestBlogsSection from "./components/sections/LatestBlogsSection/LatestBlogsSection";
 import MostSearchSection from "./components/sections/MostSearchSection/MostSearchSection";
 import NeedSomeInspirationSection from "./components/sections/NeedSomeInspirationSection/NeedSomeInspirationSection";
@@ -18,6 +19,7 @@ export default function Home() {
        <OurTeamSection/>
        <LatestBlogsSection/>
        <ExploreOurPremiumBrandsSection/>
+       <JoinHutCarSection/>
       </main>
     </div>
   );

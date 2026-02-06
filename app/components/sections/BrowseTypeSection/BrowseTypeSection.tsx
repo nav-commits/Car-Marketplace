@@ -45,6 +45,7 @@ const BrowseTypeSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-4 gap-4">
               <Button
                 title="Get Started"
+                type="button"
                 borderRadius="rounded-lg"
                 className="px-6 py-4 bg-[#405FF2] text-white flex items-center justify-center gap-2"
                 icon={

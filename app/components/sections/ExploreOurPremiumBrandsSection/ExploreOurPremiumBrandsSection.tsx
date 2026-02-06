@@ -16,6 +16,7 @@ const ExploreOurPremiumBrandsSection: React.FC = () => {
           <div className="mt-2 flex justify-center md:justify-start">
             <Button
               title="Get Started"
+              type="button"
               borderRadius="rounded-lg"
               className="items-center gap-2 bg-[#405FF2] px-6 py-3 text-sm font-medium text-white hover:opacity-90 transition"
               icon={

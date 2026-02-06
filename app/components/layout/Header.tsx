@@ -30,6 +30,7 @@ export default function Header() {
         <div className="hidden lg:flex flex-shrink-0">
           <Button
             title="Submit listing"
+            type="button"
             borderRadius="rounded-lg"
             className="border px-4 py-2"
           />
