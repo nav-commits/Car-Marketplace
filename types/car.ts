@@ -1,4 +1,4 @@
-export type CarLabel = "Great Price" | "Low Mileage";
+export type CarLabel = "Great Price" | "Low Mileage" | string;
 
 export type Car = {
   id: number;
@@ -12,4 +12,6 @@ export type Car = {
   image: string;
   inStock: boolean;
   category: "Sedan" | "SUV" | "Convertible" | "Other";
+  createdAt?: string; 
+  admin?: string;
 };
