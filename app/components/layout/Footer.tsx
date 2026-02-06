@@ -45,6 +45,7 @@ export default function Footer() {
         </div>
         <Button
           borderRadius="rounded-full"
+          type="button"
           className="bg-[#405FF2] px-3 py-3"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           icon={

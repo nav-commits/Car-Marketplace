@@ -104,6 +104,7 @@ const WhyChooseUsSection: React.FC = () => {
                         </p>
                         <Button
                           title="View Details"
+                          type="button"
                           borderRadius="rounded-lg"
                           className="px-6 py-4 text-white"
                           icon={

@@ -28,6 +28,7 @@ const HeroSection: React.FC = () => {
           ))}
           <Button
             borderRadius="rounded-full"
+            type="button"
             className="bg-[#405FF2] px-3 py-3"
             icon={
               <img
