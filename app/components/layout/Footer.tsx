@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className="px-6 py-4 border-t border-gray-300 flex flex-col md:flex-row justify-around items-center text-sm">
+      <div className="px-6 py-4 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center text-sm">
         <p>&copy; 2025 exemple.com. All rights reserved.</p>
         <div className="flex gap-3 mt-2 md:mt-0">
           <p>Terms & Conditions</p>
