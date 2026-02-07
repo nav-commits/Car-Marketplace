@@ -17,12 +17,10 @@ const BrowseTypeSection: React.FC = () => {
             className="p-6 flex flex-col items-center justify-center border border-[#E9E9E9] rounded-lg"
           >
             {type.icon && (
-              <Image
+              <img
                 src={type.icon}
                 alt={`${type.title} icon`}
-                width={34}
-                height={34}
-                className="mb-2"
+                className="w-[34px] h-[34px] mb-2"
               />
             )}
             <p className="text-md font-medium text-center">{type.title}</p>
@@ -56,12 +54,10 @@ const BrowseTypeSection: React.FC = () => {
                   />
                 }
               />
-              <Image
+              <img
                 src="/Icons/electric-car.svg"
                 alt="electric car"
-                width={80}
-                height={80}
-                className="object-contain"
+                className="w-20 h-20 object-contain"
               />
             </div>
           </div>
@@ -91,12 +87,10 @@ const BrowseTypeSection: React.FC = () => {
                   />
                 }
               />
-              <Image
+              <img
                 src="/Icons/electric-car2.svg"
                 alt="electric car"
-                width={80}
-                height={80}
-                className="object-contain"
+                className="w-20 h-20 object-contain"
               />
             </div>
           </div>

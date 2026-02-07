@@ -43,10 +43,11 @@ const HeroSection: React.FC = () => {
       <div className="relative w-full flex justify-center mt-12">
         <Image
           src="/images/car.png"
-          className="relative z-0"
           alt="Car image hero"
           width={800}
           height={356}
+          priority
+          className="z-0 max-w-full w-auto h-auto"
         />
         <div className="absolute bottom-0 left-0 w-full h-11 bg-white z-10" />
       </div>

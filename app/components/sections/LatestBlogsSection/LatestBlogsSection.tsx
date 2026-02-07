@@ -20,14 +20,16 @@ const LatestBlogsSection: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {cars.slice(6, 9).map((car) => (
           <Card key={car.id} className="rounded-xl relative">
-            <div className="relative w-full h-48">
-              <Image
-                src={car.image}
-                alt={car.title}
-                fill
-                className="object-cover rounded-xl"
-              />
-            </div>
+           <div className="relative w-full h-48">
+  <Image
+    src={car.image}
+    alt={car.title}
+    fill
+    sizes="100vw"
+    className="object-cover rounded-xl"
+  />
+</div>
+
             {car.label && (
               <div
                 className={clsx(

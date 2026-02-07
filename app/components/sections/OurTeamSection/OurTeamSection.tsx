@@ -22,13 +22,15 @@ const OurTeamSection: React.FC = () => {
               <h3 className="font-bold">{member.name}</h3>
               <p>{member.role}</p>
             </div>
-            <Image
-              src={member.imgSrc}
-              alt={member.name}
-              width={member.imgWidth}
-              height={member.imgHeight}
-              className="mt-auto"
-            />
+            <div className="relative w-74 h-74">
+              <Image
+                src={member.imgSrc}
+                alt={member.name}
+                fill
+                style={{ objectFit: "contain" }}
+                sizes="(max-width: 768px) 50vw, 200px"
+              />
+            </div>
           </Card>
         ))}
       </div>
