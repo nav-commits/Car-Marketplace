@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
       </Card>
       <div className="relative w-full flex justify-center mt-12">
         <Image
-          src="/images/car.png"
+          src="/Images/car.png"
           alt="Car image hero"
           width={800}
           height={356}
