@@ -35,6 +35,7 @@ const ExploreOurPremiumBrandsSection: React.FC = () => {
             alt="Premium brands"
             width={320}
             height={320}
+            className="w-82 h-auto" 
           />
         </div>
       </div>
