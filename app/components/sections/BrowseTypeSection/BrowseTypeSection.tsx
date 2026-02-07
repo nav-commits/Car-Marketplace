@@ -1,5 +1,4 @@
 import Card from "../../ui/Card";
-import Image from "next/image";
 import { carTypes } from "@/data/browseCarData";
 import Button from "../../ui/Button";
 
